@@ -1,0 +1,361 @@
+
+
+	* Como usar o GIT
+
+=====================================================================//
+===| Comandos básicos do git
+
+Criei uma past com um README.md dentro apra realizar o treino
+
+- git init
+inicia o repositório para a pasta
+
+- git add *nome do arquivo exe: texto.txt*
+Envia o arquivo para a área de stage, que é o pré envio para o repo
+
+- git status
+exibe o status dos aquuivos se ja estão em stage ou não
+
+- git commit -m "primeiro commit"
+Realiza o envio dos arquvos com um titulo para o repo
+
+- git branch -M "main"
+Renomear a branch principal para o novo modelo (muda apenas o nome, antes usava "master")
+
+- git remote add origin https://github.com/InaldoManso/GO_Status.git
+vai criar e preparar os repositório remoto
+
+- git push -u origin master
+Vai de fato empurrar os arquivos para a branch principal
+
+=====================================================================//
+===| Agora vamos fazer alterações para começar a usar o vesionamento
+
+Realizei alterações no README.md e criei um arquivo dart dentro da pasta 
+como se fosse o projeto para o treino 
+
+- git add . 
+para adicionar tudo que erstiver na pasta para a área de stage
+
+- git commit -m "projeto adicionado"
+vamos comitar novamente agora com ambos arquivos
+
+- git push origin main
+Agora ja não precisamos mais usar o -u remote pois ja foi criado o caminho
+
+
+=====================================================================//
+===| Criando ramificações no projeto
+
+- git checkout -b "novoBotao"
+Serve para criarmos essa nova ramificação para desenvolver algo a parte
+e ja nos deixa nessa branch
+
+criei um arquivo botao.dart par uir nessa branch
+
+- git add .
+- git commit -m "Desen o botão novo"
+
+e vai ter as duas ramificações ja no git hub
+
+- git checkout main
+Serve para voltamos a usar a main e desenvolver também na principal
+
+após voltar a principal:
+- git merge novoBotao
+Assim conseguimos unir os projetos pois o botão ja estav pronto para ser incorporado
+
+- git push origin main
+para enviarmos a atualização
+
+- git clone https://github.com/rafaballerini/GitTutorial.git
+Podemos fazer o clone dentro de uma pasta que criamos usando o GIT BASH HERE
+
+- git pull
+Para puxar atualizações desse repo baixado ou oque esta acompanhando
+
+Para copiar um repo para o nosso github direto do site para copiar ao nossos repos
+mno site accima do repo desejado basta lcicar em FORK
+
+
+- git log --graph
+Serve para visualizarmos a linha do tempo do projeto
+
+
+- git reset --hard copia
+- git push --force origin main
+
+=================================================================================
+=================================================================================
+=============================== Anotações antigas ===============================
+=================================================================================
+=================================================================================
+
+
+=====================================================================//
+
+- git log
+exibe os pontos na história do projeto como mudanças etc...
+
+- git add exemplo.dart
+- git commit -m "atualização"
+o combo destes comandos cria um novo ponto atualizado no git
+
+=====================================================================//
+===| Colocar o projeto na Nuvem GITHUB
+após inicializar a branch local com os passos atrás vamos por na nuvem
+
+- git remote add origin https://github.com/InaldoManso/PadariaExemplo.git
+vai criar e preparar os repositório remotos
+
+- git remote -v
+Mostra os repos prontos para serem upados
+
+- git push -u origin master
+Vai de fato empurrar os arquivos para a branch principal
+
+- git add . 
+(mas poderia ser: git add exemplo.dart) para 1 só arquivo
+Adiciona tudo que erstiver na pasta a ramificação local
+
+-git push
+Serve para enviarmos todas as atualizações que fizemos
+
+
+=====================================================================//
+===| Verificar alterações já feitas
+ 
+- git show
+Mostra o ultimo ponto na história do projeto
+
+- git show 999999999exemplo9999aaaaa9
+você pode exibir um item da linha do tempo 
+pegando o id de um commit no git log
+
+- git branch 
+* Significa Ramificação, e vamos usar para criar uma 
+ramificação da árvore principal
+
+
+=====================================================================//
+===| Criar uma nova linha sem altera oque ja foi feito
+
+- git branch novoRamoExemplo
+podemos usar para introduzir uma nova aba ao projeto, 
+como uma tela de cupons, e criar o arquivo nessa ramificação
+
+- git checkout novoRamoExemplo
+Acessamos esse ramo expecífico, para ter certesa 
+também podemos usar o git status
+
+- git branch 
+também serve para olhar todas as ramificações
+
+- git add novoRamoExemplo.add
+adiciona o arquivo que não foi upado nesta ramificação
+
+- git commit -m "Pagina de cupons adicionada"
+Assim conseguimos upar o arquivo a ramificação de fato
+
+
+- git log 
+para verificar se o arquivo estra mesmo upado
+
+
+=====================================================================//
+===| Adicionar as ramificações na Master
+
+- git merge novoRamoExemplo
+Tras a remificação expecifica a master
+
+- git log
+Ira apresentar que as branches foram unidas
+
+=====================================================================//
+===| Deletar a Branch da funcionalidade que ja incorparamos
+
+- git branch -D novoRamoExemplo
+Deleta a ramificação expecifica
+
+=====================================================================//
+===| Configurar dados no git para não ficar escrevendo toda hora
+
+- git config credential.helper store
+Agora sempre que subir arquivos os dados ja serão preenchidos 
+com o ultimo email e senha
+
+
+
+=====================================================================//
+===| Mexer em um projeto ja iniciado para trabalhar com um time 
+para a solucção de um B.O
+
+Podemos ir em um projeto quaquer pegar o linkgit do projeto
+
+- git clone https://github.com/InaldoManso/repoTeste.git
+Ele pega o projeto do git que ja vem descrito onde sta a pastinha
+basta jogar CD no CMD e para acessar a pastinha
+
+- ls -al
+Mostra todas as pastas do projeto e lá podemos ver o noem da pasta do projeto
+
+- git checkout -b teste 
+(-b: branch encurtado)
+Para que possamos criar uma ramificaçãod e teste para 
+este código e ja entrar nela
+
+- ls -al
+Vamos olhas as pastas para saber qual arrumar
+
+- vim exemplo.dart
+Para usarmos essa pasta expecifica editar e salvar a solução
+
+- git status
+pra ver se ele ja esta pendente para upar
+
+- git commit -am "Exemplo atualizado"
+eel ja funciona como um (git add) (git commit) (git add.) encurtados
+basta passar ja o comentário 
+
+- git checkout master
+Voltar para a linha principal e podemos unirlas com o 
+merge e dps o add e o cmommit
+
+
+=====================================================================//
+===| Resolvendo conflito
+
+Caso alteremos esse exemplo.dart no ramo 
+principal também e fizermos o git add. vamos 
+ter duas versões do emsmo arquivo
+em branchs diferentes mas sendo commitadas simultâneamente 
+
+quando você unir elas com o git merge teste ele vai apresentar 
+a mensagem de conflito ai você tem que aceitar a alteração desejada, ou 
+arrumar na mão e upar 1 só arquivo
+
+- git status
+ele vai dar a mensagem de não mergiado
+
+-git commit -am "atualizando, conflito resolvido"
+
+
+=====================================================================//
+===| Antes de enviar a resolução, precisamos atualziar o 
+projeto local para ter certeza de que vocês esta com a ultima 
+atualização do projeto no qual alguem possa também ter feito outras alterações
+
+-git pull 
+puxa todas as atualizações do repo, para que não existam 
+conflitos, ou quie possamos minimixar os conflitos 
+na descrição ja vem as alterações
+
+-git push
+Para enviar seus arquivos
+
+=====================================================================//
+===| Voltar um arquivo para um determinado momento, 
+
+(por exemplo ele funcionava e deixou de funcionar ai você pode 
+desfazer a burrada que você fez, e elha quye você é bom nisso em Inaldo)
+
+- git log
+para dar uma olhada em qual momento eu quero voltar
+
+- git chekout 999999999exemplo9999aaaaa9 -- exemplo.dart
+Assim voltaremos o arquivo expecífico deste momento, ele volta o arquivo, 
+ai você só fica de fazer o commmit novamente
+
+=====================================================================//
+===| Recuperar algo deletado
+
+* Deletamos o exemplo.dart
+
+- git status
+Ele ja vai nos mostrar que algo foi deletadio 
+mas essa mudança não foi commitada
+
+- git chekout -- exemplo.dart
+ele ja restaura o arquivo
+
+- git chekout --
+Restaura todo o ultimo ponto salvo
+
+- git chekout 999999999exemplo9999aaaaa9 -- exemplo.dart
+Caso tenhamos excluido e ja comitado algumas vezes, basta voltar 
+para quando ele ainda existia e puxar somente esse arquivo
+
+
+
+=====================================================================//
+===| Adicionar também arquivos não alterados
+
+- git add -f C:\Users\InaldoManso\GitHubProjects\go_status
+Adiciona todos os arquivos mesmo que não alterados por você
+
+
+=====================================================================//
+===| Reverter ações de git add, commit e push
+
+git rm --cached lib/model/Api.dart
+Deixa de observer, sai da área de stage sem apagar o arquivo
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
